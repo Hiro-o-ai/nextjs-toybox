@@ -1,5 +1,11 @@
-const standard = require('eslint-config-standard');
+const { FlatCompat } = require("@eslint/eslintrc")
+const  prettier = require("eslint-config-prettier");
 
 module.exports = [
-    standard
+    {
+        files: ["src/**/*.ts", "src/**/*.tsx"],
+        rules: {
+            ...prettier.rules,
+          },
+    }
 ]
